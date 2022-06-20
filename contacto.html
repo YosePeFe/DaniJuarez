@@ -16,10 +16,8 @@
     <style>
         input[type=text] {
             width: 25%;
-            padding: 12px 20px;
-            margin: 8px 0;
             box-sizing: border-box;
-            border: 3px solid #00BFC4;
+            border: 3px solid #01BDC3;
             -webkit-transition: 0.5s;
             transition: 0.5s;
             outline: none;
@@ -28,6 +26,16 @@
 
         input[type=text]:focus {
             border: 3px solid #01a3a9;
+        }
+
+        #message {
+            width: 30%;
+            height: 30rem;
+            box-sizing: border-box;
+            border: 3px solid #FF5860;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            outline: none;
         }
     </style>
 </head>
@@ -61,12 +69,11 @@
         <p>¡Holi! Si quieres trabajar conmigo o hacer alguna colaboración <br> contáctame y platiquemos más de eso.
             Besos.</p>
         <form action="/action_page.php">
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname" value="John"><br><br>
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname" value="Doe"><br><br>
-            <input type="text"> <br>
-            <input type="submit" value="Submit">
+            <label for="fname">nombre:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">email:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <input id="message" type="text"> <br>
         </form>
     </div>
 </body>
