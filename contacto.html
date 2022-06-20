@@ -60,14 +60,140 @@
         #name #email {
             font-family: 'Apple Garamond', sans-serif;
         }
+
+        @media (max-width: 900px) {
+            .navbar-nav>li {
+                padding-left: 50px;
+                padding-right: 10px;
+            }
+
+            .navbar-brand {
+                padding-left: 100px;
+            }
+
+            .navbar {
+                margin-bottom: 15%;
+            }
+
+            input[type=text] {
+                width: 45%;
+                box-sizing: border-box;
+                border: 3px solid #01BDC3;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+                border-radius: 20px;
+            }
+
+            input[type=text]:focus {
+                border: 3px solid #01a3a9;
+            }
+
+            #message {
+                width: 50%;
+                height: 20rem;
+                box-sizing: border-box;
+                border: 3px solid #FF5860;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+            }
+
+            .nabr {
+                margin-top: 20vh !important;
+            }
+
+            /*.nabc {
+                margin-bottom: 0 !important;
+                position: absolute;
+                text-align: center;
+            }*/
+        }
+
+        @media (max-width: 720px) {
+
+            .hidden-mobile {
+                display: none;
+            }
+
+            #contact {
+                text-align: left;
+            }
+
+            .navbar-brand {
+                text-align: center;
+            }
+
+            .navbar-nav>li {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .navbar-brand {
+                padding-left: 10px;
+            }
+
+            .nabr {
+                margin-top: 10vh !important;
+            }
+
+            .nabc {
+                margin-bottom: 0 !important;
+                position: absolute;
+                text-align: center;
+            }
+
+            .links {
+                width: 20px !important;
+                height: 20px !important;
+            }
+
+            .linkf {
+                width: 10px !important;
+                height: 20px !important;
+            }
+
+            input[type=text] {
+                width: 65%;
+                box-sizing: border-box;
+                border: 1px solid #01BDC3;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+                border-radius: 20px;
+                font-size: small;
+            }
+
+            input[type=text]:focus {
+                border: 3px solid #01a3a9;
+            }
+
+            #message {
+                width: 70%;
+                height: 20rem;
+                box-sizing: border-box;
+                border: 1px solid #FF5860;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+            }
+
+            .intro {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            #logonav{
+            width: 80px !important;
+        }
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="img/logo1.png" alt="" width="100">
+                <img id="logonav" src="img/logo1.png" alt="" width="100">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,44 +202,46 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Trabajo</a>
+                        <a class="nav-link hidden-mobile" href="index.html" style="color: #01BDC3;">Trabajo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        <a class="nav-link" href="contacto.html" style="color: #01BDC3;">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">Sobre mí</a>
+                        <a class="nav-link" href="about.html" style="color: #01BDC3;">Sobre mí</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div style="text-align: center; margin-top: 1em;">
-        <p id="intro" style="color: #01BDC3; font-family: 'Poppins', sans-serif;">¡Holi! Si quieres trabajar conmigo o hacer alguna colaboración <br>
-            contáctame y platiquemos más de eso.
+    <div id="contactdiv" style="text-align: center; margin-top: 1em;">
+        <p id="intro" style="color: #01BDC3; font-family: 'Poppins', sans-serif;">¡Holi! Si quieres trabajar conmigo o
+            hacer alguna colaboración <br> contáctame y platiquemos más de eso.
             Besos.</p>
         <form action="/action_page.php">
-            <label id="name" style="color: #01BDC3; font-family: 'Apple Garamond', sans-serif; font-style: italic;" for="fname">nombre:</label>
+            <label id="name" style="color: #01BDC3; font-family: 'Apple Garamond', sans-serif; font-style: italic;"
+                for="fname">nombre:</label>
             <input type="text" id="fname" name="fname"><br><br>
-            <label id="email" style="color: #01BDC3; font-family: 'Apple Garamond', sans-serif; font-style: italic;" for="lname">email:</label>
+            <label id="email" style="color: #01BDC3; font-family: 'Apple Garamond', sans-serif; font-style: italic;"
+                for="lname">email:</label>
             <input type="text" id="lname" name="lname"><br><br>
             <input id="message" type="text"> <br>
         </form>
     </div>
     <div class="container" id="footer">
         <footer class="py-3 my-4 justify-content-center">
-            <ul class="nav mb-2 mb-lg-0 d-flex justify-content-center pb-3 mb-3">
+            <ul class="nav mb-2 mb-lg-0 d-flex justify-content-center pb-3 mb-3 nabc">
                 <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><img width="40" src="img/logo2.png"
                             alt=""></a></li>
             </ul>
-            <ul class="nav mb-2 mb-lg-0 d-flex justify-content-end pb-3 mb-3" style="margin: 0 auto;">
-                <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><img width="35" height="35"
+            <ul class="nav mb-2 mb-lg-0 d-flex justify-content-end pb-3 mb-3 nabr" style="margin-top: -10vh;">
+                <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><img class="links" width="35" height="35"
                             src="img/ícono_instagram.png" alt=""></a></li>
-                <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><img width="35" height="35"
+                <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><img class="links" width="35" height="35"
                             src="img/ícono_pinterest.png" alt=""></a></li>
-                <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><img width="20" height="35"
+                <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><img class="linkf" width="20" height="35"
                             src="img/ícono_facebook.png" alt=""></a></li>
-                <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><img width="35" height="35"
+                <li class="nav-item"><a href="" class="nav-link px-2 text-muted"><img class="links"width="35" height="35"
                             src="img/ícono_linkedin.png" alt=""></a></li>
             </ul>
         </footer>
