@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Poppins'), url('https://fonts.cdnfonts.com/s/16009/Poppins-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Apple Garamond';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Apple Garamond'), url('https://fonts.cdnfonts.com/s/8857/AppleGaramond.woff') format('woff');
+}
+
 #navbarNav a:hover {
     border-bottom: 3px solid red;
 }
